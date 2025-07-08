@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #f0f0f0;
+    transition: 0.5s;
+    text-align: center;
+}
+body {
+    padding-top: 80px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 15px 100px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+header .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    border: 4px solid orange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .logo{
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+header .logo span{
+    color: orange;
+}
+header ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+    padding: 10px;
+}
+header ul li a:hover {
+    color: orange;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 500px; /* Adjust size */
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid orange;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.content{
+    max-width: 700px;
+    text-align: center;
+}
+.content h2{
+    font-size: 4em;
+    color: #333;
+    transition: 0.5s;
+}
+.content h2 span{
+    color: orange;
+}
+.content p{
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.content button{
+    background: orange;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.content button.chat{
+    background: transparent;
+    color: #333;
+    border: 2px solid orange;
+}
+#skills, #projects, #contact {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#skills h2, #projects h2, #contact h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#skills ul, #projects ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#contact p a {
+    color: orange;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#skills{
+    background: #f0f0f0;
+}
+#projects {
+    text-align: center;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.swiper {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.swiper-slide h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.swiper-slide p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: orange;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination {
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+    .content h2 {
+        font-size: 2.5em;
+    }
+    .swiper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: none;
+    }
+    .content h2 {
+        font-size: 2em;
+    }
+    .content p {
+        font-size: 0.9em;
+    }
+    .content button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 20px;
+    }
+    .content h2 {
+        font-size: 1.8em;
+    }
+    .content p {
+        font-size: 0.8em;
+    }
+    .content button {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+    #skills, #projects, #contact {
+        padding: 40px 20px;
+    }
+    .swiper-slide img {
+        max-width: 250px;
+    }
+}
+
+.dayNight{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.5em;
+}
+
+#contact {
+    padding: 50px;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Align contact info in a row */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Styling for icons */
+.contact-item ion-icon {
+    font-size: 1.5em;
+    color: orange;
+    transition: 0.3s;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.contact-item a:hover {
+    color: orange;
+}
+
+.contact-item ion-icon:hover {
+    transform: scale(1.2);
+}
+
+/*Night Mode*/
+.night-mode {
+    background: #121212;
+    color: #fff;
+}
+
+.night-mode header {
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.night-mode header .logo,
+.night-mode header ul li a {
+    color: #fff;
+}
+
+.night-mode #contact h2,
+.night-mode .contact-item,
+.night-mode .contact-item a {
+    color: #fff;
+}
+
+.night-mode .contact-item ion-icon {
+    color: orange;
+}
+
+.night-mode .dayNight {
+    background: #444;
+    color: #fff;
+}
+
+.night-mode .content h2,
+.night-mode .content p {
+    color: #121212;
+}
+
+.night-mode .content button {
+    background: orange;
+    color: #fff;
+}
+.night-mode .content button.chat {
+    border-color: orange;
+    color: #fff;
+}
+
+/* Skills, Projects, and Contact Sections */
+.night-mode #skills,
+.night-mode #projects,
+.night-mode #contact {
+    background: #333;
+}
+
+.night-mode #skills h2,
+.night-mode #projects h2,
+.night-mode #contact h2 {
+    color: #fff;
+}
+
+.night-mode #skills ul,
+.night-mode #projects ul {
+    color: #ddd;
+}
+
+/* Swiper (Project Slider) */
+.night-mode .swiper-slide {
+    background: #222;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.night-mode .swiper-slide h3,
+.night-mode .swiper-slide p {
+    color: #fff;
+}
+
+/* Navigation Buttons */
+.night-mode .swiper-button-next,
+.night-mode .swiper-button-prev {
+    color: orange;
+}
+
+/* Footer (if exists) */
+.night-mode footer {
+    background: #181818;
+    color: #fff;
+}
+
+.dayNight ion-icon:nth-child(2), 
+.banner.night .dayNight ion-icon:nth-child(1){
+    display: none;
+}
+.banner.night .dayNight ion-icon:nth-child(2){
+    display: block;
+}
+.banner.night{
+    background: #333;
+}
+.banner.night .dayNight {
+    color: #fff;
+    background: #333;
+}
+.banner.night header .logo, 
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night header ul li a{
+    color: #fff;
+}
+.banner.night .content button.chat {
+    border-color: #fff;
+    color: #fff;
+}
