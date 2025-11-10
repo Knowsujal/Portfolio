@@ -326,51 +326,25 @@ form input:focus, form textarea:focus {
 
 /* Day/Night Toggle Button */
 .dayNight {
-    position: absolute;
-    top: 15px;
+    position: fixed;
+    top: 20px;
     right: 30px;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background: #f0f0f0;
+    background: #f2f2f2;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 1001;
-    transition: 0.5s;
-    font-size: 1.5em;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1.4em;
     color: #333;
   }
   
-  .dayNight ion-icon:nth-child(2), 
-.banner.night .dayNight ion-icon:nth-child(1){
-    display: none;
-}
-.banner.night .dayNight ion-icon:nth-child(2){
-    display: block;
-}
-.banner.night{
-    background: #333;
-}
-.banner.night .dayNight {
-    color: #fff;
-    background: #333;
-}
-.banner.night header .logo, 
-.banner.night .content h2,
-.banner.night .content p,
-.banner.night .content button.chat,
-.banner.night header ul li a{
-    color: #fff;
-}
-.banner.night .content button.chat {
-    border-color: #fff;
-    color: #fff;
-}
-
-  /*.dayNight ion-icon {
+  .dayNight ion-icon {
     position: absolute;
     transition: opacity 0.25s ease;
   }
@@ -403,8 +377,13 @@ body.night-mode .dayNight {
     background: #2a2a2a;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
   }
-  body.night-mode .skill p,
+  body.night-mode .skill p {
+    color: #fff;
+  }
   body.night-mode .hero-text p {
+    color: #fff;
+  }
+  body .night-mode .project-card h3 {
     color: #fff;
   }
 /* ------------------------------
@@ -416,7 +395,6 @@ body.night-mode .dayNight {
 }
 .night-mode header {
   background: rgba(30, 30, 30, 0.9);
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 .night-mode .logo,
 .night-mode header ul li a {
@@ -440,15 +418,19 @@ body.night-mode .dayNight {
   border-color: var(--accent);
   color: var(--text-light);
 }
-/*.night-mode .btn.outline:hover {
+.night-mode .btn.outline:hover {
   background: var(--accent);
   color: #fff;
-}*/
+}
 .night-mode .skill {
   background: #2a2a2a;
 }
-.night-mode .project-card h3,
-.night-mode .project-card p,
+.night-mode .project-card h3 {
+  color: #fff;
+}
+.night-mode .project-card p {
+  color: #fff;
+}
 .night-mode .contact-links a {
   color: var(--text-light);
 }

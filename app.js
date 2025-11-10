@@ -77,6 +77,27 @@ window.addEventListener("scroll", () => {
 });
 
 // ==============================
+// NAVBAR TOGGLE (Responsive Menu)
+// ==============================
+const menuToggle = document.getElementById("menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+  const icon = menuToggle.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+});
+
+// Close menu on link click
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    menuToggle.querySelector("i").classList.add("fa-bars");
+    menuToggle.querySelector("i").classList.remove("fa-times");
+  });
+});
+
+// ==============================
 // ACTIVE NAV LINK ON SCROLL
 // ==============================
 const sections = document.querySelectorAll("section");
@@ -107,5 +128,3 @@ AOS.init({
     duration: 800,
     once: true,
   });
-// If you want subtle animations when scrolling, use AOS.js or CSS fade-ins.
-// Example: include AOS via CDN and then call AOS.init();
